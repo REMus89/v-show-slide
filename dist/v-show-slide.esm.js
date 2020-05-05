@@ -153,17 +153,19 @@ var e = {
       l = parseFloat(a.getPropertyValue('border-bottom-width')),
       u = parseFloat(a.getPropertyValue('border-top-width'))
     t.style.height = o + l + u + 'px'
-    var h = setTimeout(function() {
+    var d = setTimeout(function() {
       ;(t.style.height = 'auto'),
         e.setTargetPropertyByEl(t, 'isAnimating', !1),
         e.fireEvent(t, 'slide-open-end'),
         (t.style.overflow = 'visible')
     }, r)
-    this.setTargetPropertyByEl(t, 'timeout', h)
+    this.setTargetPropertyByEl(t, 'timeout', d)
   },
   slideClosed: function(t) {
     var e = this
-    this.fireEvent(t, 'slide-close-start'), (t.style.overflow = 'hidden')
+    this.fireEvent(t, 'slide-close-start'),
+      (t.style.overflow = 'hidden'),
+      (t.style.visibility = 'hidden')
     var i = this.getTargetByEl(t),
       n = i.isAnimating,
       s = i.timeout,

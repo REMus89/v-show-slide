@@ -170,7 +170,9 @@
     },
     slideClosed: function(t) {
       var e = this
-      this.fireEvent(t, 'slide-close-start'), (t.style.overflow = 'hidden')
+      this.fireEvent(t, 'slide-close-start'),
+        (t.style.overflow = 'hidden'),
+        (t.style.visibility = 'hidden')
       var i = this.getTargetByEl(t),
         n = i.isAnimating,
         s = i.timeout,

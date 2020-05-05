@@ -247,6 +247,7 @@ const VShowSlide: VShowSlideInterface = {
   slideClosed(el) {
     this.fireEvent(el, 'slide-close-start')
     el.style.overflow = 'hidden'
+    el.style.visibility = 'hidden'
 
     const { isAnimating, timeout, duration } = this.getTargetByEl(el)
 
