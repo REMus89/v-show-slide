@@ -215,6 +215,7 @@ const VShowSlide: VShowSlideInterface = {
 
     // Make element visible again
     el.style.visibility = 'visible'
+    el.style.overflow = 'hidden'
 
     // Set element height to scroll height + calculated border height
     const scrollHeight = el.scrollHeight
@@ -234,6 +235,7 @@ const VShowSlide: VShowSlideInterface = {
       this.setTargetPropertyByEl(el, 'isAnimating', false)
 
       this.fireEvent(el, 'slide-open-end')
+      el.style.overflow = 'visible'
     }, duration)
 
     this.setTargetPropertyByEl(el, 'timeout', newTimeout)
@@ -244,6 +246,7 @@ const VShowSlide: VShowSlideInterface = {
    */
   slideClosed(el) {
     this.fireEvent(el, 'slide-close-start')
+    el.style.overflow = 'hidden'
 
     const { isAnimating, timeout, duration } = this.getTargetByEl(el)
 
@@ -269,6 +272,7 @@ const VShowSlide: VShowSlideInterface = {
       el.style.visibility = 'hidden'
 
       this.fireEvent(el, 'slide-close-end')
+      el.style.overflow = 'visible'
     }, duration)
 
     this.setTargetPropertyByEl(el, 'timeout', newTimeout)
