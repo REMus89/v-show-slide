@@ -68,7 +68,7 @@
     "webpack-dev-server": "^3.8.0"
   },
   "scripts": {
-    "build": "rimraf dist & yarn build:umd & yarn build:esm & yarn build:iife & yarn build:demo",
+    "build": "rimraf dist & npm build:umd & npm build:esm & npm build:iife & npm build:demo",
     "build:umd": "rollup --format umd --file dist/v-show-slide.umd.js --config",
     "build:esm": "rollup --format esm --file dist/v-show-slide.esm.js --config",
     "build:iife": "rollup --format iife --file dist/v-show-slide.min.js --config",
