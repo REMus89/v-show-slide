@@ -131,8 +131,7 @@ var e = {
     var i = this.getTargetByEl(t),
       n = i.easing,
       s = i.durationInSeconds
-    ;(t.style.overflow = 'hidden'),
-      (t.style.transition = 'height ' + n + ' ' + s)
+    t.style.transition = 'height ' + n + ' ' + s
   },
   toggleSlide: function(t, e) {
     e.value !== e.oldValue &&
@@ -154,13 +153,13 @@ var e = {
       l = parseFloat(a.getPropertyValue('border-bottom-width')),
       u = parseFloat(a.getPropertyValue('border-top-width'))
     t.style.height = o + l + u + 'px'
-    var d = setTimeout(function() {
+    var h = setTimeout(function() {
       ;(t.style.height = 'auto'),
         e.setTargetPropertyByEl(t, 'isAnimating', !1),
         e.fireEvent(t, 'slide-open-end'),
         (t.style.overflow = 'visible')
     }, r)
-    this.setTargetPropertyByEl(t, 'timeout', d)
+    this.setTargetPropertyByEl(t, 'timeout', h)
   },
   slideClosed: function(t) {
     var e = this

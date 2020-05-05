@@ -138,8 +138,7 @@
       var i = this.getTargetByEl(t),
         n = i.easing,
         s = i.durationInSeconds
-      ;(t.style.overflow = 'hidden'),
-        (t.style.transition = 'height ' + n + ' ' + s)
+      t.style.transition = 'height ' + n + ' ' + s
     },
     toggleSlide: function(t, e) {
       e.value !== e.oldValue &&
