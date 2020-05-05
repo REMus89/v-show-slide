@@ -180,7 +180,7 @@ const VShowSlide: VShowSlideInterface = {
     }
 
     const { easing, durationInSeconds } = this.getTargetByEl(el)
-    el.style.overflow = 'hidden'
+    // el.style.overflow = 'hidden'
     el.style.transition = `height ${easing} ${durationInSeconds}`
   },
 
